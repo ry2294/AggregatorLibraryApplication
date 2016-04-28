@@ -18,7 +18,7 @@ var processTweet = function(rawTweet) {
         tweet.lat = rawTweet.geo.coordinates[0];
         tweet.long = rawTweet.geo.coordinates[1];
         console.log(tweet);
-        unirest.post('http://mockbin.com/request')
+        unirest.post('http://localhost:8080/redditbot/webapi/tweet')
         .headers({'Accept': 'application/json', 'Content-Type': 'application/json'})
         .send(tweet)
         .end(function (response) {
