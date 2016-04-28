@@ -16,7 +16,7 @@ var processTweet = function(rawTweet) {
         tweet.id = rawTweet.id;
         tweet.text = rawTweet.text;
         tweet.lat = rawTweet.geo.coordinates[0];
-        tweet.long = rawTweet.geo.coordinates[1];
+        tweet.lon = rawTweet.geo.coordinates[1];
         console.log(tweet);
         unirest.post('http://localhost:8080/redditbot/webapi/tweet')
         .headers({'Accept': 'application/json', 'Content-Type': 'application/json'})
