@@ -1,0 +1,12 @@
+{
+  "name": "tweetstream",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "twitter": "^1.2.5",
+    "unirest": "^0.4.2"
+  }
+}
