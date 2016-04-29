@@ -23,6 +23,11 @@ var processTweet = function(rawTweet) {
         .send(tweet)
         .end(function (response) {
         });
+        unirest.post('http://localhost:4445/restdemo')
+        .headers({'Accept': 'application/json', 'Content-Type': 'application/json'})
+        .send(tweet)
+        .end(function (response) {
+        });
     }
 };
 
