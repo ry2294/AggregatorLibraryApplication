@@ -13,7 +13,7 @@ var client = new Twitter({
 var processTweet = function(rawTweet) {
     if(rawTweet.geo != null && rawTweet.text!= null) {
         var tweet = {};
-        tweet.id = rawTweet.id;
+        tweet.tweetid = rawTweet.id;
         tweet.text = rawTweet.text;
         tweet.lat = rawTweet.geo.coordinates[0];
         tweet.lon = rawTweet.geo.coordinates[1];
@@ -22,7 +22,6 @@ var processTweet = function(rawTweet) {
         .headers({'Accept': 'application/json', 'Content-Type': 'application/json'})
         .send(tweet)
         .end(function (response) {
-            console.log(response.body);
         });
     }
 };
